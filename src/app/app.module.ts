@@ -12,12 +12,15 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import {ClientService} from './services/client.service';
+import {SiteService} from './services/site.service';
+import { RegSiteComponent } from './reg-site/reg-site.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegSiteComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import {ClientService} from './services/client.service';
     HttpClientModule, 
     ReactiveFormsModule
   ],
-  providers: [ClientService],
+  providers: [ClientService,SiteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
