@@ -15,6 +15,8 @@ import {ClientService} from './services/client.service';
 import {SiteService} from './services/site.service';
 import { RegSiteComponent } from './reg-site/reg-site.component';
 import { ReservationsComponent } from './reservations/reservations.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { ReservationsComponent } from './reservations/reservations.component';
     LoginComponent,
     RegisterComponent,
     RegSiteComponent,
-    ReservationsComponent
+    ReservationsComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,11 @@ import { ReservationsComponent } from './reservations/reservations.component';
     BrowserAnimationsModule,
     CustommaterialModule,
     HttpClientModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyCvC_-tiKGNd-6B_D77isqGASduFhD-xQ8",
+      libraries: ["places"]
+    }),
   ],
   providers: [ClientService,SiteService],
   bootstrap: [AppComponent]

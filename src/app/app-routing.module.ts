@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RegSiteComponent } from "./reg-site/reg-site.component";
 import { ReservationsComponent } from "./reservations/reservations.component";
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
   }, {
     path: 'reservations',
     component: ReservationsComponent
+  }, {
+    path: 'main',
+    component: MainpageComponent
   }
 
 ];

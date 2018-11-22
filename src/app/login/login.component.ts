@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     let coreo = this.loginForm.value.email;
     let pass = this.loginForm.value.password;
     console.log("Inicio de secion: ",coreo,pass);
+    this.router.navigate(['/main']);
   }
   signUp(){
 		this.router.navigate(['/register']);

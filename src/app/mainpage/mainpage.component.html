@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="navbar navbar-absolute">
+  <span class="fill-remaining-space">TripTEC</span>
+  <button mat-button [matMenuTriggerFor]="menu">Reservaciones</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Lista de deseos</button>
+    <button mat-menu-item>Mis reservaciones</button>
+  </mat-menu>
+  <span routerLink="/reg-site">Registrar Centro</span>
+</mat-toolbar>
+
+
+
+
+
+

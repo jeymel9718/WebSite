@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 import {SiteService} from '../services/site.service';
+
+declare const google: any;
 
 @Component({
   selector: 'app-reg-site',
@@ -11,25 +13,29 @@ import {SiteService} from '../services/site.service';
   styleUrls: ['./reg-site.component.scss']
 })
 export class RegSiteComponent implements OnInit {
-	public regSiteForm: FormGroup;
+  @ViewChild("search") searchElementRef: ElementRef;
+  public regSiteForm: FormGroup;
   constructor(private fb:FormBuilder, private router:Router, private siteService:SiteService) { 
     this.regSiteForm = fb.group({
-      dir: ['',Validators.required],
-      lat: ['',Validators.required],
-      lon: ['',Validators.required],
-      name: ['',Validators.required],
-      description: ['',Validators.required],
-      activities: ['',Validators.required],
-      price: ['',Validators.required],
-      type: ['',Validators.required],
-      phone: ['',Validators.required],
-      rating: ['',Validators.required],
-      schedule: ['',Validators.required],
-      image: ['',Validators.required],
-      website: ['',Validators.required]
+      dir: [''],
+      lat: [''],
+      lon: [''],
+      name: [''],
+      description: [''],
+      activities: [''],
+      price: [''],
+      type: [''],
+      phone: [''],
+      rating: [''],
+      schedule: [''],
+      image: [''],
+      website: ['']
     });
 	}
   ngOnInit() {
+    let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+      types: ["geocode"]
+    });
   }
 
   register(){
