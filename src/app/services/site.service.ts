@@ -14,5 +14,9 @@ export class SiteService {
     createSite(site:any): Observable<any>{
 
         return this.http.post(this.url,site);
-    }    
+    } 
+
+    getSites():Observable<any>{
+        return this.http.get(this.url);
+    }
 }

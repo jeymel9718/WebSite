@@ -1,0 +1,49 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<mat-card class="example-card">
+
+  <mat-card-header>
+
+    <mat-card-title>Site Register</mat-card-title>
+
+  </mat-card-header>
+
+  <mat-card-content>
+
+   
+      <table>
+      	<tr>
+			    <th>Place</th>
+			    <th>Rating</th> 
+			    <th>Image</th> 
+			    <th>Schedule</th> 
+			    <th>Action</th>
+				</tr>  
+				<tr>
+			    <th>Place</th>
+			    <th>Rating</th> 
+			    <th>Image</th> 
+			    <th>Schedule</th> 
+			    <th>
+			    	<button mat-raised-button color="primary" type="button" (click)="onClick()">Reserve</button>
+			    </th>
+				</tr>
+    </table>
+
+  </mat-card-content>

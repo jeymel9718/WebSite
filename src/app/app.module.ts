@@ -14,13 +14,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {ClientService} from './services/client.service';
 import {SiteService} from './services/site.service';
 import { RegSiteComponent } from './reg-site/reg-site.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    RegSiteComponent
+    RegSiteComponent,
+    ReservationsComponent
   ],
   imports: [
     BrowserModule,
